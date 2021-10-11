@@ -24,7 +24,8 @@ def roll():
     dice_label.pack()
 
     sum = first_dice + second_dice + third_dice
-    result_label.config(text='Tài' if sum > 10 else 'Xỉu')
+    result_label.config(text='Tài' if sum > 10 else 'Xỉu',
+                        foreground='red' if sum > 10 else 'green')
     result_label.pack(after=dice_label)
 
 
